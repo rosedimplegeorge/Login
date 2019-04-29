@@ -14,6 +14,15 @@ class LoginForm extends Component {
     submitForm =(e) => {
         e.preventDefault()
         console.log("Submit Form function invoked ny clicking the submit button")
+        console.log(this.state.userName)
+        console.log(this.state.password)
+        if(this.state.userName==='Rose'){
+            alert("Welcome User")
+        }
+        else
+        {
+            alert("Please enter Valid Credentials")
+        }
     }
     render() {
         return (
