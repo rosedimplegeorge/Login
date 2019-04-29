@@ -5,11 +5,23 @@ class LoginForm extends Component {
         return (
             <div className="login-form-container" style={formStyle}>
                 <h2>Login Form Component</h2>
-                <form>
-                    <input type="text"
+                <form style={fieldStyle} >
+                    <label >User Name : </label>
+                    <input style={formInputStyle} 
+                         type="text"
                          name="userName"
                          placeholder="username"
-                    />                    
+                    />  
+                    <br /> 
+                    <label>Password : </label>
+                    <input style={formInputStyle}
+                         type="text"
+                         name="password"
+                         placeholder="password"
+                    />  
+                    <br />
+                    <button style={btnStyle}>Submit</button> 
+
                 </form>
             </div>
         );
@@ -28,5 +40,26 @@ const formStyle = {
   background: "#ffffff",
   margin: "100px auto"
 }
+
+const fieldStyle ={
+    padding: "10px",
+    border: "solid 1px #BDC7D8",
+    display: "block",
+    marginBottom: "10px",
+    width: "90%"
+}
+
+const formInputStyle={
+    padding: "15px",
+    border: "solid 1px #BDC7D8"
+}
+
+const btnStyle={
+  backgroundColor: "#00BFFF",
+  borderColor: "#3ac162",
+  fontWeight: "bold",
+  padding: "12px 15px"
+}
+
 
 export default LoginForm;
