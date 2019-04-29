@@ -10,11 +10,16 @@ class LoginForm extends Component {
         console.log("onchange function called")
         this.setState({[e.target.name] : e.target.value})
     }
+
+    submitForm =(e) => {
+        e.preventDefault()
+        console.log("Submit Form function invoked ny clicking the submit button")
+    }
     render() {
         return (
             <div className="login-form-container" style={formStyle}>
                 <h2>Login Form Component</h2>
-                <form style={fieldStyle} >
+                <form style={fieldStyle} onSubmit={this.submitForm} >
                     <label >User Name : </label>
                     <input style={formInputStyle} 
                          type="text"
@@ -31,8 +36,11 @@ class LoginForm extends Component {
                          onChange={this.onChange}
                     />  
                     <br />
-                    <button style={btnStyle}>Submit</button> 
-
+                    <input style={btnStyle}
+                        type="submit" 
+                        className="button"
+                        value="Submit"
+                    />
                 </form>
             </div>
         );
