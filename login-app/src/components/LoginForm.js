@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+//import ValidUser from './ValidUser';
 
 class LoginForm extends Component {
     state = {
@@ -13,11 +15,15 @@ class LoginForm extends Component {
 
     submitForm =(e) => {
         e.preventDefault()
+        const validateData = {
+            userName: this.state.userName,
+            password: this.state.password
+        }
         console.log("Submit Form function invoked ny clicking the submit button")
         console.log(this.state.userName)
         console.log(this.state.password)
-        if(this.state.userName==='Rose'){
-            alert("Welcome User")
+        if(validateData.userName==='Rose'){
+            alert("Welcome User");
         }
         else
         {
@@ -25,6 +31,7 @@ class LoginForm extends Component {
         }
     }
     render() {
+
         return (
             <div className="login-form-container" style={formStyle}>
                 <h2>Login Form Component</h2>
