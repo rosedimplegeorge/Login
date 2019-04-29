@@ -5,6 +5,7 @@ class ValidUser extends Component {
         return (
             <div>
                 <h1>Valid User</h1>
+                <p>Welcome User</p>
             </div>
         );
     }

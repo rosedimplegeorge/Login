@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-//import ValidUser from './ValidUser';
+import ValidUser from './ValidUser';
 
 class LoginForm extends Component {
     state = {
