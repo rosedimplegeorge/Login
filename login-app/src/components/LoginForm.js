@@ -5,7 +5,12 @@ class LoginForm extends Component {
         return (
             <div className="login-form-container" style={formStyle}>
                 <h2>Login Form Component</h2>
-                <form></form>
+                <form>
+                    <input type="text"
+                         name="userName"
+                         placeholder="username"
+                    />                    
+                </form>
             </div>
         );
     }
