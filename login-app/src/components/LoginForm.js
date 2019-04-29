@@ -8,6 +8,7 @@ class LoginForm extends Component {
 
     onChange = (e) => {
         console.log("onchange function called")
+        this.setState({[e.target.name] : e.target.value})
     }
     render() {
         return (
