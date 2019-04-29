@@ -5,6 +5,10 @@ class LoginForm extends Component {
         userName: '',
         password: ''
     }
+
+    onChange = (e) => {
+        console.log("onchange function called")
+    }
     render() {
         return (
             <div className="login-form-container" style={formStyle}>
@@ -15,6 +19,7 @@ class LoginForm extends Component {
                          type="text"
                          name="userName"
                          placeholder="username"
+                         onChange={this.onChange}
                     />  
                     <br /> 
                     <label>Password : </label>
