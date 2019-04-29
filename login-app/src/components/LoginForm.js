@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 class LoginForm extends Component {
+    state = {
+        userName: '',
+        password: ''
+    }
     render() {
         return (
             <div className="login-form-container" style={formStyle}>
