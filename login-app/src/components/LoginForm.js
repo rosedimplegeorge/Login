@@ -28,6 +28,7 @@ class LoginForm extends Component {
                          type="text"
                          name="password"
                          placeholder="password"
+                         onChange={this.onChange}
                     />  
                     <br />
                     <button style={btnStyle}>Submit</button> 
